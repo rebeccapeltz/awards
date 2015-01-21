@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dashboad">
+    <meta name="author" content="peltz">
+    <link rel="icon" href="../../favicon.ico">
+
+
+    <title>Angular: Winter Olympics</title>
+    <link href="../lib/iconic/ionic.css" rel="stylesheet">
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/app.css" rel="stylesheet">
+   
+    <link rel="stylesheet" type="text/css" href="../lib/d3/dc.css" />
+    <link href="../css/dashboard.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div id="left-nav">
+            <div class="welcome">Welcome, Rebecca</div>
+            <div class="title">Menu</div>
+            <ul class="list">
+                <li class="list-item">
+                    <a class="item-content" href="#/dashboard1">
+                        <i class="ion-stats-bars"></i>
+                        <h3>Dashboard 1</h3>
+                        <p>Medals by country</p>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a class="item-content" href="#/dashboard2">
+                        <i class="ion-pie-graph"></i>
+                        <h3>Dashboard 2</h3>
+                        <p>Pie chart example</p>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a class="item-content" href="#/dashboard3">
+                        <i class="ion-connection-bars"></i>
+                        <h3>Dashboard 3</h3>
+                        <p>Four charts drill-down</p>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a class="item-content" href="#/dashboard4">
+                        <i class="ion-connection-bars"></i>
+                        <h3>Dashboard 4</h3>
+                        <p>Using dc.js</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="container" class="transition">
+            <header class="bar bar-header nav-bar bar-stable">
+                <button id="btn-menu" class="button button-icon" style="font-size: 22px;"><i class="ion-navicon-round"></i>
+                </button>
+                <h1 class="title">Winter Olympics Dashboard</h1>
+            </header>
+            <div class="container-fluid">
+                <div id="content">
+                    <div ng-view="" id="ng-view"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="../lib/jquery.js"></script>
+        <script src="../lib/fastclick.js"></script>
+
+        <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../lib/bootstrap/assets/js/docs.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../lib/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+        <script src="../lib/angular/angular.js"></script>
+        <script src="../lib/angular/angular-route.min.js"></script>
+        <script src="../app/app.js"></script>
+
+        <script type="text/javascript" src="../lib/d3/d3.js"></script>
+        <script type="text/javascript" src="../lib/d3/crossfilter.js"></script>
+        <script type="text/javascript" src="../lib/d3/dc.js"></script>
+        <script type="text/javascript" src="../lib/d3/colorbrewer.js"></script>
+
+        <script src="../js/award_charts.js"></script>
+
+    </div>
+</body>
+
+</html>
