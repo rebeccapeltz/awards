@@ -135,8 +135,7 @@
          composite
              .width(400)
              .height(200)
-         // .x(d3.scale.linear().domain([1994, 2010]))
-         .x(d3.time.scale().domain([minDate, maxDate]))
+             .x(d3.time.scale().domain([minDate, maxDate]))
              .y(d3.scale.linear().domain([5, 60]))
              .yAxisLabel("Award total")
              .xAxisLabel("Year")
@@ -172,11 +171,9 @@
                 .group(grp2, "USA")
                 .dashStyle([2, 2])
             ])
-             .brushOn(false)
-             .xAxis().tickFormat(function (v) {
-                 return v;
-             }).tickValues([1994, 1998, 2002, 2006, 2010]);
+             .brushOn(false);
 
+         
          var yearDim = ndx.dimension(dc.pluck('dy'));
 
 
@@ -185,7 +182,7 @@
          });
 
          yearRingChart
-             .width(200).height(200)
+             .width(400).height(200)
              .dimension(yearDim)
              .group(year_total)
              .innerRadius(10);

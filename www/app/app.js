@@ -10,16 +10,22 @@ $('#btn-menu').click(function () {
 
 var app = angular.module('myApp', ['ngRoute']);
 
+app.controller('dashboard1Ctrl', function($scope){
+    crossfiltercharts.render();   
+});
+
 app.config(['$routeProvider',
   function ($routeProvider) {
         $routeProvider.
         when('/', {
             title: 'Dashboard 1',
-            templateUrl: 'partials/dashboard1.html'
+            templateUrl: 'partials/dashboard1.html',
+            controller: 'dashboard1Ctrl'
         })
             .when('/dashboard1', {
                 title: 'Dashboard 1',
-                templateUrl: 'partials/dashboard1.html'
+                templateUrl: 'partials/dashboard1.html',
+                controller: 'dashboard1Ctrl'
             })
             .when('/dashboard2', {
                 title: 'Dashboard 2',
